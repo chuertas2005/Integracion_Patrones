@@ -1,6 +1,6 @@
 package integracionpatrones.builder;
 
-import com.documentengine.model.Document;
+import flyweight.Document;
 
 public interface DocumentBuilder {
 
