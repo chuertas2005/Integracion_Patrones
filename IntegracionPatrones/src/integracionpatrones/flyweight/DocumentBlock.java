@@ -1,4 +1,4 @@
-package integracionatrones.flyweight;
+package integracionpatrones.flyweight;
 
 import java.util.ArrayList;
 import java.util.List;
