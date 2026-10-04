@@ -31,4 +31,9 @@ public class FacturaSimpleBuilder extends BaseDocumentBuilder {
         super.addFooter(text);
         return this;
     }
+    @Override
+    public FacturaSimpleBuilder addIcon(String name, String baseImage) {
+        super.addIcon(name, baseImage);
+        return this;
+}
 }
