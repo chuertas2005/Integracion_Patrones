@@ -1,9 +1,6 @@
 package integracionpatrones.builder;
 
-import flyweight.FlyweightFactory;
-import flyweight.Document;
-import flyweight.DocumentBlock;
-import flyweight.PositionedElement;
+import flyweight.*;
 
 public abstract class BaseDocumentBuilder implements DocumentBuilder {
 
@@ -17,8 +14,7 @@ public abstract class BaseDocumentBuilder implements DocumentBuilder {
         this.document = new Document();
     }
 
-    protected void addTextBlock(String type, String text,
-                                int size, String color) {
+    protected void addTextBlock(String type, String text, int size, String color) {
 
         DocumentBlock block = new DocumentBlock(type);
 
@@ -73,5 +69,25 @@ public abstract class BaseDocumentBuilder implements DocumentBuilder {
         currentY = 0;
 
         return completedDocument;
+        
+    @Override
+    public DocumentBuilder addIcon(String name, String baseImage) {
+
+        DocumentBlock block = new DocumentBlock("ICON");
+
+        block.addElement(new PositionedElement(
+                factory.getIcon(name, baseImage),
+                0,
+                currentY,
+                24,
+                "black"
+        ));
+
+        document.addBlock(block);
+        currentY++;
+
+        return this;
+}
+
     }
 }
