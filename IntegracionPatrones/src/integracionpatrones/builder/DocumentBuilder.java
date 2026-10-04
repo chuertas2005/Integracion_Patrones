@@ -12,5 +12,7 @@ public interface DocumentBuilder {
 
     DocumentBuilder addFooter(String text);
 
+    DocumentBuilder addIcon(String name, String baseImage);
+
     Document build();
 }
