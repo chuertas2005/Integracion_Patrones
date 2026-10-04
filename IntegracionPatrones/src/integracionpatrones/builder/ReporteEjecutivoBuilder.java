@@ -31,4 +31,9 @@ public class ReporteEjecutivoBuilder extends BaseDocumentBuilder {
         super.addFooter(text);
         return this;
     }
+    @Override
+    public ReporteEjecutivoBuilder addIcon(String name, String baseImage) {
+        super.addIcon(name, baseImage);
+        return this;
+    }
 }
