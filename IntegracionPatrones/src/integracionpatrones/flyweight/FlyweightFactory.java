@@ -3,9 +3,6 @@ package integracionpatrones.flyweight;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.documentengine.model.CharacterFlyweight;
-import com.documentengine.model.IconFlyweight;
-
 public class FlyweightFactory {
 
     private final Map<String, CharacterFlyweight> characters =
