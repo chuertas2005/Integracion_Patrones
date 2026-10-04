@@ -1,4 +1,4 @@
-package IntegracionPatrones.src.integracionpatrones.flyweight;
+package integracionpatrones.flyweight;
 
 public class CharacterFlyweight implements DocumentElement {
 
